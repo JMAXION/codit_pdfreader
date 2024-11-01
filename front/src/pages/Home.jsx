@@ -48,9 +48,16 @@ export default function Home() {
 
   return (
     <div>
-      <h1>PDF Viewer</h1>
-      <input type="file" accept="application/pdf" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload PDF</button>
+      <p>
+        <input
+          type="file"
+          accept="application/pdf"
+          onChange={handleFileChange}
+        />
+      </p>
+      <p>
+        <button onClick={handleUpload}>Upload PDF</button>
+      </p>
       {pdfUrl && (
         <div>
           <PDFViewer pdfUrl={`http://localhost:5000/${pdfUrl}`} />
